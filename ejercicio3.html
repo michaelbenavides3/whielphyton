@@ -1,0 +1,25 @@
+#Programa para solicitar el nombre, apellido, edad y la nota promedio de 5 estudiantes de un curso de computación.
+#inicializar contador de estudiantes
+
+estudiantes = 0
+#inicializar lista para almacenar la informacion de los estudiantes
+
+informacion_estudiantes = []
+
+#mientras el numero de estudiantes se menos que <5
+
+while estudiantes <2:
+    #solicitar informacion del estudiante
+    nombre = input("ingrese el nombre del estudiante: ")
+    apellido = input("ingresar el apellido del estudiante: ")
+    edad = int(input("ingrese la edad del estudiante: "))
+    nota_promedio = float(input("ingrese la nota promedio del estudiante: "))
+    # almacenar la informacion del estudiante en la lista
+    informacion_estudiantes.append({"nombre": nombre,"apellido": apellido, "edad": edad, "nota_promedio": nota_promedio})
+    #incrementar el contador de estudiantes
+    estudiantes += 1
+    #imprimir la informacion de los estudiantes
+for estudiantes in informacion_estudiantes:
+    print(f"Nombre: {estudiantes['nombre']}{estudiantes['apellido']}")
+    print(f"Edad: {estudiantes['edad']}")
+    print(f"Nota promedio: {estudiantes['nota_promedio']}")
