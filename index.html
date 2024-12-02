@@ -1,0 +1,32 @@
+#Hacer un algoritmo que al ingresar 2 números por la pantalla y se calcule la suma, resta, multiplicación y división. El proceso debe terminar cuando se hallan realizado 10 procesos (Hacer uso de contadores)
+#
+#contador arranca en 0 para culminar en 10 de lo contrario haria 
+contador = 0
+#declarar el contado que llegue hasta 10
+while contador < 10:
+  #se le pide al usuario que ingrese los numeros
+    num1 = float(input("ingrese el primer numero: "))
+    num2 = float(input("ingrese el segundo numero: "))
+    # se realiza la operacion
+    suma = num1 + num2
+    resta = num1 - num2
+    multiplicacion = num1 * num2
+    #if la condicion es que num2 no sea igual a "0"
+    if num2 != 0:
+              division = num1 / num2
+    # else que num2 no se puede divirdir por "0"
+    else:
+        division = "no se puede dividir por cero"
+        
+    #mostrar el resultado de las operaciones
+    
+    print(f"la suma es: {suma}")
+    print(f"la resta es: {resta}")
+    print(f"la multiplicaion es: {multiplicacion}")
+    print(f"la division es: {division}")
+    print("------------------------------")
+    # contador va sumando en 1 hasta llegar a "10" para terminar el proceso
+    contador += 1
+
+#resultado final, se muestra en un print
+print("se han realizado 10 operaciones, fin del proceso")
