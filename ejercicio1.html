@@ -1,0 +1,26 @@
+#En una granja se requiere saber alguna información para determinar el precio de venta por cada kilo de huevo. precio se determina a traves del promedio de calidad de las N gallinas que hay en la granja. La calidad de cada gallina se obtiene según la formula: calidad = (peso de la gallina * altura de la gallina)/Numero de huevos que pone;
+
+i = 0
+#se le pide al usurio ingresarnumero de gallina en la granja
+num_gallinas = int(input("ingresar el numero de gallinas: "))
+calidad_total = 0
+
+while i < num_gallinas:
+    peso_gallina = float(input(f"ingrese el peso de la gallina {i+1} (kg):"))
+    altua_gallina = float(input(f"ingrese la altura de la gallina {i+1} (cm):"))
+    num_huevos = int(input(f"ingrese el numero de huevos que pone la gallina {i+1}: "))
+    
+    if num_huevos == 0:
+      print ("la gallina no pone heuvos no se puede calcular la calidad")
+    else:
+      calidad = ( peso_gallina * altua_gallina) / num_huevos
+      calidad_total += calidad
+      print(f"la calidad de la gallina {i+1} es: {calidad}")
+      #contador va sumistrar de 1 en 1 
+      i+=1
+      #formula para determinar la calidad de la gallina
+      calidad_promedio = calidad_total / num_gallinas
+      precio = calidad_promedio / 36
+      #muestra el resultado de las operaciones 
+      print(f"la calidad promedio de las gallinas es: {calidad_promedio}")
+      print(f"el precio de la venta por kilo de huevo es: ${precio}")
